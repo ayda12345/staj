@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <title>Diyetisyenim</title>
+        <link rel="stylesheet" href="styles.css">
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .main{
+        width: 30%;
+        height: 100%;
+        position: absolute;
+    }
+    .form-box{
+    width: 480%;
+    height: 480px;
+    position: relative;
+    background-color:rgb(249, 245, 245);
+    box-shadow: 0 0 20px 9px rgb(250, 248, 247);
+    margin: 6% auto;
+    padding: 30px;
+    }
+    .button-box{
+        width: 220px;
+        height: 35px auto;
+        position: relative;
+        box-shadow: rgb(243, 241, 244);
+        border: none;
+    }
+    .toggle-btn{
+        position: relative;
+        padding:10px 30px ;
+        border: none;
+        background: transparent;
+        font-size: 50px;
+        cursor:pointer;
+        font-weight: bolder;
+    }
+    #btn{
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 110px;
+        background:linear-gradient(to right,rgb(161, 180, 183))
+    }
+    .button-box button:nth-child(2){
+        color: rgb(234, 148, 36);
+    }
+    .social-icons{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-icons lottie-player{
+    width: 40px;
+    margin: 0px 12px;
+    cursor: pointer;
+}
+    .input-group{
+        position: absolute;
+        top: 180px;
+        width: 280px;
+
+    }
+    .input-field{
+        width: 100%;
+        padding: 10px 0;
+        border: none;
+        margin: 5px 0;
+        background: transparent;
+        border-bottom: 1px solid rgb(117, 110, 110);
+        outline: none;
+    }
+    .submin-btn{
+        display: block;
+        width: 85%;
+        padding: 10px;
+        border: none;
+        background: rgb(248, 245, 245);
+        cursor: pointer;
+        font-weight: 60px;
+        font-size: 15px;
+        margin: auto;
+        outline: none;
+    }
+    .input-group a{
+        display: inline-block;
+        text-decoration: none;
+        color: gray;
+        margin: 30px 10px 30px 0px;
+        font-size: 12px;
+    }
+
+
+</style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="form-box">
+              <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn">HOŞGELDİNİZ</button>
+              </div>
+              <div class="social-icons">
+
+                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_tll0j4bb.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_9ycwmgb9.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+              </div>
+         
+              <form class="input-group">
+                <input type="text" class="input-field" placeholder="Kullanıcı Adınız" required>
+                <input type="password" class="input-field" placeholder="Şifreniz" required>
+                <button style="background-color:rgb(222, 163, 81);color:white;width:200px;height:70px;"> Giriş Yap <button>
+                    <p class="mesaj">Üye Değil Misin ? <a href="üye olma.html" style="width:50px;height: 50px;">Hesap Oluştur</a></p>
+            </form>
+            </div>
+        </div>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </body>
+</html>

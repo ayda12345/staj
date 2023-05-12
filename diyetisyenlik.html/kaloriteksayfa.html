@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Vücut Kitle Endeksi </title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+        
+    
+</head>
+ 
+	<body data-bs-spy="scroll" data-bs-target="#navbarExample">
+        
+       
+        <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation">
+            <div class="container">
+
+                
+                <a class="navbar-brand logo-text" href="index.html">Diyetisyenim</a> 
+
+               
+
+                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+
+            <form>
+                <div class="form-group">
+                  <label for="boy">Boyunuzu Girin(cm)</label>
+                  <input type="text" class="form-control" id="boy" placeholder="173">
+                </div>
+                <div class="form-group">
+                  <label for="kilo">Kilonuzu Girin(kg)</label>
+                  <input type="text" class="form-control" id="kilo" placeholder="73">
+                </div>
+              </form>
+                
+              <div class="alert alert-primary" role="alert" id="vki">
+                Endeks Hesaplama
+            </div>
+        </div>
+    </div>
+          </div>  
+    
+    <script>
+        
+        const boy =document.querySelector("#boy")
+        const kilo =document.querySelector("#kilo")
+        const vki =document.querySelector("#vki")
+        
+        boy.addEventListener('input',vkiHesapla);
+        kilo.addEventListener('input',vkiHesapla);
+        
+        function vkiHesapla()
+        {
+            b=boy.value/100
+            k=kilo.value
+            endeks  = k/(b*b)
+            endeks=endeks.toFixed(2)
+ 
+            vki.setAttribute("class","") 
+            if(endeks <18)
+            {
+                vki.innerHTML="ZAYIF vki:" + endeks  
+                vki.setAttribute("class","alert alert-secondary")
+            
+            }   
+            else if(endeks >= 18 && endeks <25)
+            {
+                vki.innerHTML="NORMAL vki:"+endeks
+                vki.setAttribute("class","alert alert-success")
+            }
+            else if(endeks >= 25 && endeks <30)
+            {
+                vki.innerHTML="KİLOLU vki:"+endeks
+                vki.setAttribute("class","alert alert-warning")
+            }
+            else if(endeks >= 30 && endeks <35)
+            {
+                vki.innerHTML="OBEZ vki:"+endeks
+                vki.setAttribute("class","alert alert-danger") 
+            }
+            else
+            {
+                vki.innerHTML="CİDDİ OBEZ vki:"+endeks
+                vki.setAttribute("class","alert alert-danger")
+            }
+        }
+    </script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_6rRg5u/obese/data.json"  background="transparent"  speed="1"  style="width: 1500px; height: 300px;"  loop  autoplay></lottie-player>
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_szvfehji.json"  background="transparent"  speed="1"  style="width: 1200px; height: 300px;"  loop controls autoplay></lottie-player>
+
+</body>
+</html>
